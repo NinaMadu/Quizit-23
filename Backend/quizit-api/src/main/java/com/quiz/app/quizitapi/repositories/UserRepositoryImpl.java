@@ -15,9 +15,9 @@ import java.sql.Statement;
 @Repository
 public class UserRepositoryImpl implements UserRepository{
 
-    private static final String SQL_CREATE = "INSERT INTO USERS(USER_ID, FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES(NEXTVAL('USER_ID_SEQ'), ?, ?, ?, ?) ";
-    private static final String SQL_COUNT_BY_EMAIL = "SELECT COUNT(*) FROM USERS WHERE EMAIL = ?";
-    private static final String SQL_FIND_BY_ID = "SELECT USER_ID, FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD " + "FROM USERS WHERE USER_ID = ?";
+    private static final String SQL_CREATE = "INSERT INTO users(USER_ID, FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES(NEXTVAL('USER_ID_SEQ'), ?, ?, ?, ?, ?) ";
+    private static final String SQL_COUNT_BY_EMAIL = "SELECT COUNT(*) FROM users WHERE EMAIL = ?";
+    private static final String SQL_FIND_BY_ID = "SELECT USER_ID, FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD " + "FROM users WHERE USER_ID = ?";
 
     @Autowired
     JdbcTemplate jdbcTemplate;

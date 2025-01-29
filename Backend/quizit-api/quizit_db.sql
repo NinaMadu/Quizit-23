@@ -15,11 +15,11 @@ CREATE SEQUENCE question_id_seq START 1 INCREMENT BY 1 CACHE 1;
 -- Users table
 CREATE TABLE users (
     user_id INTEGER PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    email VARCHAR(30) UNIQUE NOT NULL,
-    username VARCHAR(30) NOT NULL,
-    password VARCHAR(20) NOT NULL,
-    first_name VARCHAR(20),
-    last_name VARCHAR(20),
+    email VARCHAR(40) UNIQUE NOT NULL,
+    username VARCHAR(40) NOT NULL,
+    password VARCHAR(65) NOT NULL,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
